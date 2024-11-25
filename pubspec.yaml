@@ -1,7 +1,8 @@
 name: time_and_zone_detector
 description: "A Flutter Plugin to detect time and zone"
 version: 0.0.1
-homepage:
+homepage: "https://docs.flutter.dev/"
+repository: "https://github.com/AbdulManan999/Time-and-Zone-Plugin.git"
 
 environment:
   sdk: '>=3.2.3 <4.0.0'

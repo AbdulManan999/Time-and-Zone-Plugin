@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 
-import 'TimeZone.dart';
+import 'time_zone.dart';
 import 'time_and_zone_detector_platform_interface.dart';
 
 class TimeAndZoneDetector {
@@ -36,7 +36,6 @@ class TimeAndZoneDetector {
       final bool result = await _channel.invokeMethod('isTimeAutomatic');
       return result;
     } on PlatformException catch (e) {
-      print("Failed to get automatic time setting: '${e.message}'.");
       return false;
     }
   }
@@ -47,7 +46,6 @@ class TimeAndZoneDetector {
       final bool result = await _channel.invokeMethod('isZoneAutomatic');
       return result;
     } on PlatformException catch (e) {
-      print("Failed to get automatic timezone setting: '${e.message}'.");
       return false;
     }
   }

@@ -70,37 +70,37 @@ class _MyAppState extends State<MyApp> {
     super.initState();
 
     // Start listening for changes
-    TimeAndZoneDetector.startListeningForTimeChanges().listen((TimeZone timeZone) {
-      setState(() {
-        // if (setting is bool) {
-        //   // Handle time and zone separately depending on the setting
-        //   _timeSetting = setting ? 'Automatic Time: Enabled' : 'Automatic Time: Disabled';
-        //   _zoneSetting = setting ? 'Automatic Timezone: Enabled' : 'Automatic Timezone: Disabled';
-        // }
-        if (timeZone.time != null) {
-          _timeSetting = timeZone.time! ? 'Automatic Time: Enabled' : 'Automatic Time: Disabled';
-        } else {
-          _timeSetting = "Automatic Time: Disabled";
-        }
-      });
-    });
-
-    // Start listening for changes
-    TimeAndZoneDetector.startListeningForZoneChanges().listen((TimeZone timeZone) {
-      setState(() {
-        // if (setting is bool) {
-        //   // Handle time and zone separately depending on the setting
-        //   _timeSetting = setting ? 'Automatic Time: Enabled' : 'Automatic Time: Disabled';
-        //   _zoneSetting = setting ? 'Automatic Timezone: Enabled' : 'Automatic Timezone: Disabled';
-        // }
-        if (timeZone.zone != null) {
-          _zoneSetting =
-              timeZone.zone! ? 'Automatic Timezone: Enabled' : 'Automatic Timezone: Disabled';
-        } else {
-          _zoneSetting = "Automatic Timezone: Disabled";
-        }
-      });
-    });
+    // TimeAndZoneDetector.startListeningForTimeChanges().listen((TimeZone timeZone) {
+    //   setState(() {
+    //     // if (setting is bool) {
+    //     //   // Handle time and zone separately depending on the setting
+    //     //   _timeSetting = setting ? 'Automatic Time: Enabled' : 'Automatic Time: Disabled';
+    //     //   _zoneSetting = setting ? 'Automatic Timezone: Enabled' : 'Automatic Timezone: Disabled';
+    //     // }
+    //     if (timeZone.time != null) {
+    //       _timeSetting = timeZone.time! ? 'Automatic Time: Enabled' : 'Automatic Time: Disabled';
+    //     } else {
+    //       _timeSetting = "Automatic Time: Disabled";
+    //     }
+    //   });
+    // });
+    //
+    // // Start listening for changes
+    // TimeAndZoneDetector.startListeningForZoneChanges().listen((TimeZone timeZone) {
+    //   setState(() {
+    //     // if (setting is bool) {
+    //     //   // Handle time and zone separately depending on the setting
+    //     //   _timeSetting = setting ? 'Automatic Time: Enabled' : 'Automatic Time: Disabled';
+    //     //   _zoneSetting = setting ? 'Automatic Timezone: Enabled' : 'Automatic Timezone: Disabled';
+    //     // }
+    //     if (timeZone.zone != null) {
+    //       _zoneSetting =
+    //           timeZone.zone! ? 'Automatic Timezone: Enabled' : 'Automatic Timezone: Disabled';
+    //     } else {
+    //       _zoneSetting = "Automatic Timezone: Disabled";
+    //     }
+    //   });
+    // });
   }
 
   @override
